@@ -19,7 +19,6 @@ public class Sample {
 	
 	@GetMapping("/")
 	public Object getSomething() {
-		
 		Object obj = restTemplate.getForObject("https://jsonplaceholder.typicode.com/todos/1", Object.class);
 		return obj;
 		
@@ -39,6 +38,10 @@ public class Sample {
 		return out;
 	}
 	
+	@GetMapping("/sample")
+	public String getData() {
+		return "sampleoutput";
+	}
 	
-
+	
 }
